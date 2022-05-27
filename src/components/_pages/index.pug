@@ -1,0 +1,32 @@
+extends ../_layouts/default.pug
+
+block variables
+  - 
+    let title = 'Company website homepage';
+    let servicesList = [
+      {
+        title: 'Non-IT enterprises', 
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat bibendum sit felis, sollicitudin et. Nulla aliquet integer hac ac morbi.',
+      }, 
+      {
+        title: 'Software product companies', 
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.',
+      }, 
+      {
+        title: 'Non-IT enterprises', 
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Blandit viverra porta tortor, elementum ultrices. Blandit quam nec aliquam.',
+      }, 
+    ]
+
+block header 
+  include ../_sections/header/header.pug
+
+block main
+  include ../_sections/hero/hero.pug
+  include ../_sections/about/about.pug
+  include ../_sections/services/services.pug
+  include ../_sections/map/map.pug
+  include ../_sections/contact/contact.pug
+
+block footer 
+  include ../_sections/footer/footer.pug

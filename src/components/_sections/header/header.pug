@@ -1,0 +1,36 @@
+include ../../_ui/svg/svg.pug
+
+- 
+  let navList = [
+    {
+      aLink: '#', 
+      aInner: 'Home',
+    },
+    {
+      aLink: '#', 
+      aInner: 'About',
+    },
+    {
+      aLink: '#', 
+      aInner: 'Our Services',
+    },
+    {
+      aLink: '#', 
+      aInner: 'Service Map',
+    },
+    {
+      aLink: '#', 
+      aInner: 'Contact Us',
+    },
+  ] 
+
+header.header
+  div.container.header__container
+    div.layout.header__layout
+      img( class="header__logo" src="assets/img/logo.png", alt="Logo" )
+      nav.header__nav 
+        ul.ul-reset.header__list.list-header 
+          each item in navList 
+            li.list-header__item 
+              a.link.link--nav.list-header__link( href=item.aLink, title=item.aInner )=item.aInner 
+      button.button.button--sign-in.header__sign-in( type="button" ) Sign in 

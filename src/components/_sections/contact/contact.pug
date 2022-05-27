@@ -1,0 +1,10 @@
+section.contact 
+  .container.contact__container 
+    .layout.contact__layout 
+      h2.heading.heading--2.contact__heading Contact Us
+      form.contact__form.form-contact( action="#", method="POST" ) 
+        input.form-contact__input( name="name", type="text", placeholder="Full Name" )
+        input.form-contact__input( name="email", type="email", placeholder="Email Address" )
+        input.form-contact__input( name="phone", type="tel", placeholder="Phone Number", pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" )
+        textarea.form-contact__input.form-contact__input--msg( name="msg", placeholder="Have anything to say?" )
+        button.button.button--form.form-contact__button( type="submit" ) Send

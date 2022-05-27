@@ -1,0 +1,18 @@
+include ../../_ui/card/card.pug
+
+section.services 
+  .container.services__container 
+    .layout.services__layout 
+      h2.heading.heading--2.services__heading Our Services
+      ul.ul-reset.services__list.list-services 
+        - 
+          let n = 0;
+          let type;
+        each item in servicesList 
+          if n % 2 == 0
+            - type = "right";
+          else 
+            - type = "left";
+          - n++;
+          li.list-services__item 
+            +card( type, item.title, item.desc )

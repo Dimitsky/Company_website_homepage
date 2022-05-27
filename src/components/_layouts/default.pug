@@ -1,0 +1,19 @@
+block variables 
+  - 
+    let charset = 'UTF-8';
+    let title = 'Title';
+
+doctype html
+html( lang="en" )
+  head
+    meta(charset=charset)
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block styles 
+      link(rel="stylesheet" href= app.isBuild ? "assets/css/style.min.css" : "assets/css/style.css")
+    block scripts 
+    title=title
+  body.body 
+    block header 
+    main.main 
+      block main 
+    block footer

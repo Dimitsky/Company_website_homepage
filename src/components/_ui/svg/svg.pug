@@ -1,0 +1,13 @@
+- 
+  function getSize( viewBox ) {
+    let width = viewBox.split( ' ' )[2];
+    let height = viewBox.split( ' ' )[3];
+
+    return { height: height, width: width };
+  }
+
+mixin svg( id, mod, viewBox )
+  - let size = getSize( viewBox );
+  
+  svg( class=`svg ${mod}`, viewBox=viewBox, height=size.height, width=size.width )
+    use( href=`assets/img/defs.svg#${id}` )

@@ -1,0 +1,18 @@
+mixin card( type="right", title, desc ) 
+  case type 
+    when "right"
+      div( class="card card--right" )
+        div( class="card__body card__body--right" )
+          div( class="card__wrap card__wrap--right" )
+            div( class="card__content" )
+              h3( class="heading heading--3 card__heading" )= title
+              p( class="paragraph card__paragraph" )= desc 
+              button( class="button button--common card__button" ) Learn More
+    when "left"
+      div( class="card card--left" )
+        div( class="card__body card__body--left" )
+          div( class="card__wrap card__wrap--left" )
+            div( class="card__content" )
+              h3( class="heading heading--3 card__heading" )= title
+              p( class="paragraph card__paragraph" )= desc 
+              button( class="button button--common card__button" ) Learn More
