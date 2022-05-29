@@ -7,6 +7,7 @@
   font-weight: 400 
   line-height: 1.145 
   background: none 
+  cursor: pointer
 
   &::after 
     position: absolute 
@@ -22,8 +23,18 @@
     border-radius: 100px
     padding: 0.4em 2.8em 0.4em 1.5em
     color: var( --color-royal ) 
+    transition: background-color .3s ease, border .3s ease
+
+    &:hover
+      border-color: coral
+      background: coral
+
+    &:hover
+      border-color: red
+      background: red
 
   &--fullfiled
+    z-index: 1
     border: none 
     border-radius: 100px
     padding: .5em 3em .5em 1.5em 
@@ -31,14 +42,39 @@
     background: rgb(0,43,194)
     background: linear-gradient(20deg, rgba(0,43,194,1) 0%, rgba(9,21,63,1) 100%)
 
+    &::before
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: -1
+      border-radius: 100px
+      background: linear-gradient(20deg, rgba(9,21,63,1) 0%, rgba(0,43,194,1) 100%)
+      opacity: 0
+      transition: opacity .3s ease
+
+    &:hover::before
+      opacity: 1
+
   &--sign-in
     border: 2px solid var( --color-sign-in )
     border-radius: 100px
     padding: .5em 1.5em
     color: var( --color-text-menu )
+    transition: background-color .3s ease, border .3s ease
 
     &::after 
       content: none 
+
+    &:hover
+      border-color: coral
+      background: coral
+
+    &:active
+      border-color: red
+      background: red
 
   &--form
     border: none 
@@ -47,6 +83,19 @@
     padding: .5em 
     color: #fff 
     background: var( --color-royal ) 
+    transition: background-color .3s ease
 
     &::after
       content: none
+
+    &:hover
+      background: coral
+
+    &:active
+      background: red
+
+@media screen and ( max-width: 1439px )
+  .button
+
+    &--sign-in
+      padding: 0.3em 1.2em

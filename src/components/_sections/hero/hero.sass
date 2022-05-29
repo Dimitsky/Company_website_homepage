@@ -16,3 +16,34 @@
     font-size: .833rem
     font-weight: 500
     line-height: 1.8
+
+@media screen and ( max-width: 1439px )
+  .hero
+
+    &__layout
+      margin-bottom: 30px
+      padding-top: 30px
+      padding-bottom: 34px
+      background: url("../img/hero/bg-1.svg") no-repeat right 0px top 50%/26vw, url("../img/hero/bg-2.svg") no-repeat right 20vw top 50%/20%
+
+    &__heading
+      max-width: 400px
+      margin-bottom: 33px
+
+    &__paragraph
+      max-width: 400px
+      margin-bottom: 35px
+
+@media screen and ( max-width: 767px )
+  .hero
+
+    &__layout
+      margin-bottom: 40px
+      padding: 0
+      background: none
+
+    &__heading
+      margin-bottom: 20px
+
+    &__paragraph
+      margin-bottom: 20px

@@ -39,3 +39,51 @@
 
   &__paragraph
     margin-bottom: 55px
+
+@media screen and ( max-width: 1439px )
+  .card
+
+    &__body
+      padding: 50px
+
+      &--right
+        background-position: right 80px top 50%
+
+      &--left
+        background-position: left 80px top 50%
+
+    &__heading
+      margin-bottom: 30px
+
+    &__paragraph
+      margin-bottom: 30px
+
+    &__content
+      max-width: 450px
+
+@media screen and ( max-width: 1023px )
+  .card
+
+    &__content
+      max-width: 350px
+
+@media screen and ( max-width: 767px )
+  .card
+
+    &__body
+      padding: 0
+      border-radius: 0
+      background-image: none
+
+    &__content
+      display: flex
+      align-items: flex-start
+      flex-direction: column
+      padding: 40px 15px
+
+    &__heading
+      align-self: center
+
+    &__paragraph
+      align-self: center
+      margin-bottom: 20px

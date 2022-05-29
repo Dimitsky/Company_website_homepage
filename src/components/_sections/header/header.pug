@@ -27,9 +27,11 @@ include ../../_ui/svg/svg.pug
 header.header
   div.container.header__container
     div.layout.header__layout
+      button.burger( id="trigger" type="button" aria-expanded="false" aria-label="Page menu" )
+        span.burger__item 
       img( class="header__logo" src="assets/img/logo.png", alt="Logo" )
-      nav.header__nav 
-        ul.ul-reset.header__list.list-header 
+      nav.header__nav( id="menu" )
+        ul.ul-reset.header__list.list-header
           each item in navList 
             li.list-header__item 
               a.link.link--nav.list-header__link( href=item.aLink, title=item.aInner )=item.aInner 

@@ -27,3 +27,133 @@
 
   &__item:not(:last-child)
     margin-right: 40px
+
+.burger
+  position: relative
+  border: 0
+  border-radius: 0
+  display: none
+  height: 30px
+  width: 30px
+  padding: 0
+  background: none
+
+  &__item
+    position: absolute
+    top: 50%
+    right: 50%
+    border-radius: 3px
+    height: 2px
+    width: 20px
+    background: black
+    opacity: 1
+    transform: translate( 50% )
+    transition: background 0s .1s ease
+
+    [aria-expanded=true] & 
+      background: transparent
+
+    &::before, &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      border-radius: 3px
+      height: 2px
+      width: 20px
+      background: black
+      transition: top .2s .2s ease, transform .2s 0s ease
+
+      [aria-expanded=true] & 
+        top: 0
+        transition: top .2s 0s ease, transform .2s .2s ease
+
+    &::before
+      top: -8px
+
+      [aria-expanded=true] & 
+        transform: rotate( 45deg )
+
+    &::after
+      top: 8px
+
+      [aria-expanded=true] & 
+        transform: rotate( -45deg )
+
+@media screen and ( max-width: 1439px )
+  .header
+
+    &__layout
+      min-height: 90px
+      padding: 20px 0
+
+    &__logo
+      height: unset
+      width: 60px
+
+    &__nav
+      flex-basis: 450px
+
+  .list-header
+
+    &__item:not(:last-child)
+      margin-right: 20px
+
+@media screen and ( max-width: 1023px )
+  .burger
+    z-index: 1010
+    display: block 
+
+  .header
+
+    &__layout
+      position: relative
+      height: 90px
+      min-height: unset
+      padding: 0
+
+    &__logo
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      margin: 0
+
+    &__nav
+      position: absolute
+      top: -100vh
+      right: 0
+      left: 0
+      z-index: 1000
+      display: block
+      margin: 0 -40px
+      padding: 20px
+      visibility: hidden
+      background: var(--color-bg-one)
+      transition: visibility 0s .4s ease, top .4s ease
+
+      &.open
+        top: 90px
+        visibility: visible
+        transition: visibility 0s .0s ease, top .4s ease
+
+    &__list
+      display: block
+
+    &__sign-in
+      margin: 0
+
+  .list-header
+    
+    &__item:not(:last-child)
+      margin-right: 0
+      margin-bottom: 20px
+
+@media screen and ( max-width: 767px )
+  .header
+
+    &__layout
+      margin-bottom: 40px
+
+    &__nav
+      margin: 0

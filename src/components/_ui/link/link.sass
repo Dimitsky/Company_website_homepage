@@ -5,6 +5,7 @@
   font-weight: 500
   line-height: 1.145
   text-decoration: none
+  transition: color .3s ease
 
   &::after
     content: ''
@@ -13,7 +14,11 @@
     left: 0
     height: .08em
     width: 100%
-    background: var( --color-heading )
+    background: currentColor
+    transition: background-color .3s ease
+
+  &:hover 
+    color: coral
 
   &--nav
     color: var( --color-text-menu )
@@ -22,3 +27,11 @@
 
     &::after
       content: none
+
+@media screen and ( max-width: 1023px )
+  .link
+
+    &--nav
+      display: block
+      font-size: 1.3rem
+      text-align: center

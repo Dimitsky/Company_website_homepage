@@ -29,3 +29,44 @@
     color: var( --color-text-alternative )
     font-size: .917rem
     line-height: 1.818
+
+@media screen and ( max-width: 1439px )
+  .about
+
+    &__layout
+      margin-bottom: 40px
+      min-height: 250px
+
+    &__heading
+      margin-right: 50px
+      padding: 40px
+
+    &__paragraph
+      padding-right: 40px
+
+@media screen and ( max-width: 1023px )
+  .about
+
+    &__heading
+      flex-basis: 230px
+
+@media screen and ( max-width: 767px )
+  .about
+
+    &__layout
+      border-radius: 0
+      display: block
+      margin-bottom: 20px
+      padding: 40px 15px
+
+    &__heading
+      border: none
+      border-radius: 0
+      display: block
+      margin: 0 0 20px 0
+      padding: 0
+      background: none
+      text-align: center
+
+    &__paragraph
+      padding: 0

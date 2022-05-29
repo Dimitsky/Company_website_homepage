@@ -36,3 +36,55 @@
 
   &__list
     list-style-type: disc
+
+@media screen and ( max-width: 1439px )
+  .map
+
+    &__layout
+      margin-bottom: 40px
+
+    &__heading
+      margin-bottom: 30px
+
+    &__list
+      margin-bottom: 40px
+
+  .list-map
+
+    &__item
+      padding: 50px
+
+    &__heading
+      margin-right: 40px
+
+@media screen and ( max-width: 1023px )
+  .list-map
+
+    &__heading
+      flex-basis: 150px
+
+@media screen and ( max-width: 767px )
+  .list-map
+
+    &__layout
+      margin-bottom: 20px
+
+    &__heading
+      margin-bottom: 20px
+
+    &__list
+      margin-bottom: 20px
+
+    &__item:not(:last-child)
+      margin-bottom: 20px
+
+    &__item
+      border-radius: 0
+      display: block
+      margin: 0 -15px
+      padding: 40px 15px
+      background-image: none
+
+    &__heading
+      margin: 0 0 20px
+      text-align: center

@@ -11,6 +11,7 @@ html( lang="en" )
     block styles 
       link(rel="stylesheet" href= app.isBuild ? "assets/css/style.min.css" : "assets/css/style.css")
     block scripts 
+      script(src="assets/js/script.js" defer)
     title=title
   body.body 
     block header 
